@@ -1,0 +1,80 @@
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+	Machine Learning	(Part of Computer Science)
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++[Principle]:
+	-Use statistical technique to give the computer system the ability to learn(gradually improve the performance) from data
+	 without being explicited programmed.
+	-Explore the study and construction of algorithms that can learn from data and make predictions on data.
+
++[Tasks]:
+	-Supervised Learning:
+		+Find out the general rule or map between inputs and outputs 
+		+Find out the general rule or map between example inputs and desired outputs 
+	
+	-Demi Supervised Learning:
+		+Outputs incomplete  or missing
+
+	-Acitive Learning:
+	-Unsupervised Learning: data mining on data analysis
+		+No labels are given to the learning algorithm, leaving it alone to find out structure in inputs or hidden patterns in data
+
+	-Reinforcement Learning:
+		+Data(in forms of Rewards and Punishments) are given only as feedback to program's action in a dynamic environment.
+	-Multitask Learning:
+
++[Outputs]:
+	-Classification: Supervised Learning; the output group kknown beforehand
+	-Regression:
+	-Clustering: Unsupervised Learning; the output group unknown beforehand
+	-Density Estimation:
+	-Dimentionality Reduction:		
+
+
++[Ties]:
+	-Data Mining:
+	-Mathematical Optimization:
+	-Data Analysis:
+
++[Softwares]: Machine Learning Algorithms
+
++[Algorithms]:
+	-Decision Tree Learning: decision tree like predictive model
+	-Association Rule Learning: discovery of interesting relations among variables in databases
+	-Artificial Neural Network Learning: ANN
+		+Inspiration by biological neural networks
+		+Computation by a connectionnist approach on an interconnected group of neural network
+		+No-linear statistical data model between inputs and outputs in order to find out patterns
+	-Deep Learning: the same way human beings which processes light/sound into vision and hearing
+		+Computer Vision:
+		+Speech Recognition:
+	-Inductive Logic Programming Learning:
+		+Inductive from Practic to Theory
+	-Support Vector Machines Learning: Supervised Learning Methods
+		+A set of methods for Classification and Regression
+	-Clustering Learing: Unsupervised Learning
+		+ Assign some observations into the same cluster (observations with the same attribut)	
+		+ Assign some observations into different clusters (observations with different attributs)
+	-Rule-based Learning:
+	-Presentation Learning:
+		+ Discover the better presentation of inputs
+	-Similarity and Metric Learning:
+	-Sparse Dictionary Learning:	
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

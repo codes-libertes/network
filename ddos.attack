@@ -1,0 +1,27 @@
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+	DDOS Distributed Denial Of Service Attack	
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
++[Objectif]:[Hackers] seeks to make [targets] unavailable to users by disrupting services of [targets].
+	-Flooding superfluous requests to overload systems and prevent legitimate requests from being fulfilled
+
+
++[Attack]:
+
++[Defense]:
+	-[Blackholing&Sinkholing]: all traffics to the attacked DNS/IP Address is sent to the blackhole(null interface&null-existent-server)
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+
+
+
+
+
+
+
+

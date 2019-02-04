@@ -1,0 +1,128 @@
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+	Switch Attack
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++Attack:
+	-[IDS][RUM]Network Tap
+	-[IDS][RUM]Port Mirroring/SPAN/RSPAN/RAP
+
++Defense:
+	-[IDS][RUM]Network Tap
+	-[IDS][RUM]Port Mirroring/SPAN/RSPAN/RAP
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++Manufacture:
+	-[Avaya]
+	-[Cisco]
+	-[Juniper]
+	-[Nokia.Alcatel-Lucent]
+	-[Brocade]
+	-[ZTE]
+	-[Belkin.Linksys]
+	-[Netgear]
+	-[D-Link]
+	-[TP-Link]
+
++Switch:
+	-[Objective]Receive/Process/Forward data[Packet:Header&Payload] based on
+		-[Layer 2]MAC
+		-[Layer 3]IP:Routing
+
+	-[Types.Layer]
+		-Layer 2 Switch
+		-Layer 3 Switch
+		-Multilayer Switch
+
+	-[Types.Connection]
+		-Ethernet Switch
+		-FC[Fibre Channel]Switch
+		-ATM[Asynchronous Transfer Mode] Switch
+		-IB[Infiniband] Switch
+
+	-[Surveillance]
+		-Port Mirroring
+		-RMON:Remote Network Monitoring
+		-SMON:Switch Monitoring
+		-SFLOW: Sampled Flow
+
+	-[Layer.Purpose]
+		+[1]
+			+[Port] Enable&Disable
+			+[Bandwidth]
+			+[Duplex] Full&Half
+			+[Port Mirroring]
+
+		+[2] Bridging(by MAC)
+			+[Bandwidth]Storage Area Network: Uplink Lower bandwidth to Higher Bandwidth
+							  Downlink High bandwidth to Lower Bandwidth
+			+[STP] Spanning Tree Protocol
+				-Data Link Layer
+				-[Purpose] Prevent Loops among Switches in LAN 
+			+[SPB] Shortest Path Bridging
+				-Data Link Layer
+				-[Purpose] Activate multipaths with equal cost amongs Switches in LAN
+			+[VLAN]
+			+[LINK AGGREGATION] Set up multiple ports for the same connection to achieve higher data transfer rates and 
+					    reliability. 
+
+		+[3] Could support all functions of Router
+			+[IGMP] Internet Group Management Protocol Snooping
+				-Router Port / Member Port
+			+[Routing Protocols]
+				-[IGP]: Interior Gateway Protocol [Exchanging routing informations in only one AS]
+					+[OSPF]Open Shortest Path Protocol [Link-State][Layer 3]
+					+[RIP] Routing Information Protocol [Distance Vector] [Layer 3][UDP][Broadcast.Multicast]
+					+[ISIS] Intermediate System to Intermediate System[Link-State][Layer 2]
+					+[EIGRP] Enhanced Interior Gateway Routing Protocol [Distance Vector] [Layer 3]
+				-[EGP]: Exterior Gateway Protocol [Exchanging routing informations between many ASs]
+					+[BGP] Border Gateway Protocol [Path Vector][TCP]
+
+			+[VLAN Routing]
+		+[4] Vendor-dependent
+			+[NAT] Network Address Translation
+			+[Load Distribution] based on TCP
+			+[QoS] Quality Of Service
+			+[Firewall] stateful
+			+[VPN] Virtual Private Network Concentrator
+			+[IPSec] IPSec security gateway
+			+[LIST] Access Control List
+			+[MAC Filtering]
+			+[NAC] Network Access Control 802.1x
+
+		+[7] Application Level
+			+[Load Distribution] by URL
+			+[WEB Cache]
+			+[CDN] Content Delivery Network
+			+[SDN] Software Defined Network - OpenFlow Protocol
+			+[SSH]
+			+[TELNET]
+			+[SNMP] Simple Network Management Protocol Agent
+			+[Web Interface] Web Browser 
+
++Hub:
+	-[Surveillance][IDS][RUM.Real User Monitoring][Network Performance Management]
+		-Network Tap
+		-Port Mirroring:Forward-Copy data to configured port(s)
+			-[CISCO]
+				-[SPAN] Switched Port Analyzer
+				-[RSPAN] Remoted Switched Port Anayzer
+			-[HP.3COM]
+				-[RAP] Roving Analysis Port	
+
+	-[Objective] Forward data to all ports.
+
+	-[Difference.Switch] Forward data to configured port(s) 
+
+
+
+
+
+
+
+
+
+
+
+
+

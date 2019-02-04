@@ -1,0 +1,69 @@
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+	ARP Spoofing
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+English
+ +Principle: Send spoofed ARP Requests(ARP Annoucements) onto the local area network;
+	     Associate (hacker) MAC address with (Target) IP address,like default Gateway;
+	     Send (Target) all network traffic to (Hacker)
+
+ +Preconditions: 1.Access.(Hacker) Gain direct access to Local area network(Target);
+		 	+Inside attack
+			+Outside attack: Breach wifi
+		 2.ARP. LAN must support ARP protocol. 
+
+ +[Defense]:Static, Read-only @IP~@MAC mapping APR Table n^2-n
+ +[Defense]:ARP Spoofing Detection and Prevention Software;
+	-->Block ARP Reply(Uncertified); Certified Dynamic and Static @IP integrated in DHCP Server/Switch/Hub/Router
+	-->Listen for ARP Reply; A device in LAN is listening for ARP Reply and notifies via Email if ARP mapping changes 
+	-->[Possibility ARP Spoofing]: Multiple @IP associates with One @MAC
+
+ +Protocol: 
+    -Address Resolution Protocol in the Data Link Layer for discovering MAC address(Target) as giving IP address(Target);
+	?Mapping?
+	->Verify ARP Cache (THA&TPA)
+	->Yes
+	->No,(Sender)Broadcast ARP Message with THA FF:FF:FF:FF:FF:FF;Target responds with (THA&TPA) and inserts (SHA&SPA)
+    -Communication Protocol
+    -IPv6 ARP is replaced by NDP(Neighbor Discovery Protocol);
+    -Request&Response:28.1.0x0800.6.4.12.0x0806
+    -ARP Probe: (Sender) Broadcast ARP message with SPA 00.00.00.00 for (Sender) IPv4 Address Conflict Detection;
+    -ARP Annoucements: (Target) Update [SHA,SPA] in ARP Cache when (Sender) [SHA,SPA] changes
+	-->(Sender) Broadcast Gratuitous ARP Message with TPA=SPA,THA 00:00:00:00:00:00
+    -ARP Mediation: Ethernet & Frame Relay & ATM
+    -ARP Inverse: Ethernet & Frame Relay & ATM
+    -ARP Reverse: Ethernet & Frame Relay & ATM
+    -ARP Proxy: On behalf of a system which answers ARP requests and forwards (ARP requests) traffic.
+	-->ARP replies could come from system other than the one with the required MAC.
+    -ARP Spoofing: (Spoofer)ARP Proxy with the objectif (intercept network traffic from Target)
+		   (Spoofer)An answering system with the objectif (intercept network traffic from Target)
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+1.Spoof: Assume or semulate the identity of another or device in order to gain access to a system 
+	 by differents protocols ARP/DNS/IP/MAC
+2.PDU: Protocol Data Unit
+  -OSI Model
+	Application Layer:
+	Presentation Layer:
+	Session Layer:
+	Transport Layer: PDU Segment(TCP) and Datagram(UDP)
+	Network Layer:   PDU Packet
+	Data Link Layer: PDU Frame
+	Physical Layer:  PDU Bit
+
+  -TCP/IP Model
+	Application Layer:
+	Transport Layer: PDU Segment(TCP) and Datagram(UDP)
+	Internet Layer:  PDU Packet
+	Link Layer:      PDU Frame
+
+3.Network Card with 2 MAC addresses for load balancing against incoming traffic -- Start up the system and execute ARP Annoucement.
+4.DHCP: Dynamic Host Configuration Protocol
+  -Management Protocol
+  -A DHCP server dynamically assigns IP address and other network configuration parameters to devices in LAN.
+
+
+
+
+

@@ -1,0 +1,47 @@
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+	SSH Attack
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++SSH Attack:
+	-[MITM] Imitate the server side for asking for the password only at the first time of authentification.
+	-[NSA.Edward Snowden] decrypt SSH
+	-[SSH1&2] SSH-1 vulnerabilities
+
+
+
+
+
++SSH: Secure Shell [Application Layer]
+	-[Objectif] Secure network services (Command Line Login && Remote Cmd Execution) over an unsecured network.
+	-[Architecture.TCP.22.23] Client-Server
+	-[Cryptography][Système asymétique] Confidentiality / Integrity of Data /Authentification
+	-[Apps] OpenSSH
+	-[Apps] [Telnet] SSH replaces Telnet for logining to a remote shell
+	-[Apps] PuTTy (SCP&SSH&Telnet/SFTP)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

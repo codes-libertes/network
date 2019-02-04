@@ -1,0 +1,50 @@
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++=
+
+	LDAP lightweight Directory Access Protocol
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++=
++[Objectif]: The protocol provides directory service which manages structured information about users, systems ,networks
+  	     applications 
+
++[Model]: Client-Server
+	+Client: different applications or services
+	+Server: DSA, Directory System Agent
+		-[Purpose]: Store usernames/passwords or structured information
++[Architecture]:
+	-[Client] starts an LDAP session by conecting DSA with dedicated ports [389 TCP/UDP] ou [636 LDAPS SSL] 
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++=
++[NAP]
+	+[Objectif]: File-level data storage server providing data access to clients
+
+	+[Protocols]:
+		-FTP
+		-SFTP: SSH FTP
+		-HTTP:
+		-HTTPS:
+		-NFS: Network File System
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,94 @@
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+	Router Attack
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++Attack:
+
++Defense:
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++Manufacture:
+	-[Avaya]
+	-[Cisco]
+	-[Juniper]
+	-[ZTE]
+	-[Belkin.Linksys]
+	-[Netgear]
+	-[D-Link]
+	-[TP-Link]
+
++Router:
+	+[Layer 3]: all forwarding decisions ared determined by @IP in Packet
+	+[Purpose]: Receive, Process (@IP-->Routing Table/Routing Protocol-->) and Forward Data(Packets) between networks.
+	+[Process]:
+		-Control Plane:
+			+[Routing Table] using Routing Protocol/Static & Dynamic
+			+[RIB] Routing Information Base 
+				-Routing Protocol establishes RIB. 
+			+[FIB] Forwarding Information Base
+				-Control Plane strips non-essentials from Routing Table and builds FIB. 
+
+		-Forward Plane:
+			+[Incoming Packet] -->[Header@IP] ? [FIB @IP ] -->[Outgoing Packet]
+			+[Congestion]
+				-Tail Drop:
+				-[RED] Random Early Detection:
+				-[WRED] Weighted Random Early Detection:			
+
+
+       				+++++++++Control/Forward Planes++++++++++++
+		----------------------------		       	       ----------------------------------------
+		| Routing Table <------RIB |<----Routing Updates ----->| RIB ------------->Routing Table      |
+		----------------------------                           ----------------------------------------
+			|								       |
+        		|								       |
+		----------------------------		       	       ----------------------------------------
+Incoming ------>|      FIB		   | -->Outgoing-->Incoming--> |                      FIB             | -->Outgoing	
+	        ----------------------------		       	       ----------------------------------------
+       			
+
+				+++++++++MPLS Control/Forward Planes++++++++++++
+		----------------------------		       	       ----------------------------------------
+		| Routing Table <------RIB |<----Routing Updates ----->| RIB ------------->Routing Table      |
+		----------------------------                           ----------------------------------------
+			|								       |
+        		|								       |
+		       	  ----------------------------		       	         ----------------------------------------
+IP Packet Incoming ------>|      FIB		     | -->Outgoing-->Incoming--> |                      FIB             | --> Outgoing	
+	        	  ----------------------------		       	         ----------------------------------------
+
+
+	+[Application]: Types of routers
+			--------------------------------------
+			|    Edge Router(Provider AS)        |
+			--------------------------------------
+				   |
+			--------------------------------------
+			|Subscriber Edge Router(Customer AS) |
+			--------------------------------------
+				   |
+			--------------------------------------
+			|    Core Router(Backbone)	     |
+			--------------------------------------
+				   |
+			--------------------------------------
+			|    Distribution Router(Aggregation)|
+			--------------------------------------
+				   |
+			--------------------------------------
+			|    Access Router(SOHO)	     |
+			--------------------------------------
+	+[Application]:
+		-[Layer 4]:
+			+[NAT]:Network Address Translation which allows all devices on LAN to share a single pulic @IP
+			+[VPN]:Virtual Private Network Concentrator
+			+[Firewall]: Stateful
+			+[QoS] 
+		-[Layer 7]:
+			+[SDN] OpenFlow protocol
+
+
+
++[Metrics] distances
+

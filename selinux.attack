@@ -1,0 +1,49 @@
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+	SELINUX ATTACK
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++[Attack]:
+
++[Defense]:
+	-[Architecture]
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++[MAC]: Mandatory Access Control
+	-Type of Access Control in computer security
+
++[DAC]: Discretionary Access Control
+	-Traditional linux
+
++[MAC]: Media Access Control
+
++[LSM]: Linux Security Module Kernel-based
+	-[Purpose]: Additional, Restrictive Access Control
+
+	-[Modules]
+		-[TOMOYO]: Implements Mandatory Access Control
+		-[YAMA]:   Implements Mandatory Access Control
+		-[SMACK]:  Simplied Mandatory Access Control Kernel
+		-[SELINUX]:Implements Mandatory Access Control
+		-[APPARMOR]: Implements Mandatory Access Control & Discretionary Access Control	
+	+[NSA]:
+
+
+	-[HISTORY]:
+		+[2001] NSA proposed
+		+[2003] Standard Module for 2.6		
+
++[RBAC]:Role-based Access Control
+
+
+
+
+
+
+
+
+
+
+
+
+

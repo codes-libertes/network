@@ -1,0 +1,50 @@
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+		Sécurité Application
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	Attaque 					Défense
+
++Malware:			-|-		+Anti-virus software
+	-Virus					+firewalls
+	-Worms					+IDS
+	-Trojan horses				+IPS
+	-ransomware				+Honeypot
+	-spyware
+	-adware
+	-scareware
+
++Phishing					+Anti-phishing software
+
++Keystroking logging
++Screen scraping
++Backdoor
++Man in the browser
+
+
++Buffer overflow
++Heap overflow
++Stack overflow
++Format String Attack
++SQL Injection
++Cross-site Scripting(XSS)
++Cross-site Request Forgery(CSRF)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

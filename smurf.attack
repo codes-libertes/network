@@ -1,0 +1,46 @@
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+	Smurf Attack: DDOS attack
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++Principle:
+	-[Hacker] Broadcasts ICMP Echo Request with [Target] spoofed @IP on a network where all nodes
+	 	 respond with ICMP Echo Reply to [Target] @IP.
+	-[Target] Flooded by traffic and crashes down  
+	-[Defense] [HOST] configure not to respond to ECHO REQUESTS 
+	-[Defense] [Router] configure not to forward ICMP ECHO REQUEST packets to Broadcast Address
+			    #no ip directed-broadcast
+	-[Defense] [Target]: Smurf Amplifier,a network to make attack less severe ,responds with ICMP ECHO REPLY to [Target] spoofed @IP  
+
++Fraggle Attack:
+	-[Hacker] Broadcast from Port 7[Echo] & Port 19[Chargen] from UDP segments with [Target] spoofed @IP
+		  on a network where all nodes respond to traffic by sending traffic back to [Target] @IP
+	-[Target] Flooded by traffic and crashes down
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

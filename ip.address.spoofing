@@ -1,0 +1,68 @@
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+	IP Address Spoofing
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++Principle: 
+	-[Hacker]Create an IP packet with a false @IP for hiding the identity/Anonymity.
+	-[OSI/TCP/IP] Internet protocol defines request/must-response.
+
++Attack:
+	-[Proxy Server] third computer to protect privacy.
+	-[DOS]
+
++Defense:
+	-[Backscatter] [Target]'s the response packets; if [Hacker] is randomly spoofing @IP source
+			-,the backscatter response packets will be sent to random destinations.
+	-[Backscatter Analysis] Analyze DOS Attack and [targets]
+
+	-[Packet Filtering] 
+			-Ingress Filtering: Gateway blocks packets from [Hacker] with @IP inside
+			-Egress Filtering: Gateway blocks packets from [Hacker] without @IP  inside
+	
+	-[Authentification] network services/protocols not based on @IP
+
+	-[TCP.Protocol] sequence number & acknowledge number ( 3 & 4 handshakes)
++Test:			
+	-[Test] execute a script to simulate IP SPOOFING to attack mail/website server for Performance test.
+
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Spoofing: Header forgery & The insertion of false or misleading information to avoid being tracked
+	 -Techs for SPAMMERS/SPORGERS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

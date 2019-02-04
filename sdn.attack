@@ -1,0 +1,66 @@
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+	SDN Software-defined Networking (2011 ~ now)
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
++[Defense]:
+	-[MTD]: Moving Target Defense algorithm
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++[Purpose]: Facilitate network management and improve the network performance/monitoring by programming efficiently network cfg.
+	-[Centralization]
+	-[]
+
++[Plans]:
+	-[Application Plane]:
+	-[Control Plane]:
+	-[Data Plane]:
+
++[OpenFlow]: the protocol for remote communication with planes (switch/router)
+
++[SNMN]:Software-defined  Mobile Networking
+
++[SDLAN]: Software-defined LAN
+
++[SDWAN]: Software-defined WAN
+ 
++[MTD]: Moving Target Defense
+
++[DPI]: Deep Packet Inspection
+
++[NFV]: Network Function Virtualization
+
++[SDN Controllers]:
+	-OpenDayLight
+	-ONOS
+	-Project Calico
+	-The Fast Data Project
+	-Project FloodLight
+	-Beacon
+	-Lighty.IO
+	-NOX/POX
+	-Open vSwitch: Virtual Switch supporting OpenFlow protocol
+	-Vne.io/SDNC
+	-Ryu Controller
+	-Cherry
+	-Faucet
+	-OpenContrail
+
++[Mininet]: Network emulation tool for SDN
+	-Based on cgroups and network namespaces to emulate network nodes and links
+
+
+
+
+
+
+
+
+
+
+
+
+

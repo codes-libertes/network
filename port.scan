@@ -1,0 +1,96 @@
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+	Port Scan
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Objective: Probe a node (host or server) for active ports or services by sending requests to a range of ports
+	   on that node.
+
+Principle:
+	+Network service:[@IP][Port] 
+	+Port states:
+		-Open/Accepted: Target sends a reply indicating the service is listening on the port
+		-Closed/Denied/Not listening: Target sends a reply indicating the connection is denied on the port
+		-Filtered/Dropped/Blocked: Target does not send a reply
+
+Types:
+	+TCP Scanning:Use OS network functions which completes TCP Three-way handshakes and then closes it immediately from DOS attack.
+		-Nmap uses Unix connect() system call
+		-[Target] will log [Hacker] @IP inside IDS
+	+SYN Scanning:Not based on OS network functions but [hacker] generates raw IP packets and minitors for responses.
+		-[Target] Port open: [Hacker] sends SYN packet, [Target] responds with SYN-ACK packet, [Hacker] responds with 
+		 		     RST packet to terminate the connection
+		-[Target] Port close/unfiltered: [Hacker] sends SYN packet but [Target] responds with RST packet.
+		-[Target] never receives a connection,less intrusive
+		-[Target] Firewall is scanning for and blocking the SYN Packets
+	+UDP Scanning:
+		-Connectionless protocol withou SYN/SYN-ACK
+		-Principle:
+			-[Target]Port not open/No Firewall:[Hacker] sends UDP packet and [Target] responds with ICMP port unreachable msg.
+			-[Target]Port open/No Firewall:[Hacker] sends UDP packet and [Target] uses the absence of the response.
+			-[Target]Port Firewall: ICMP Rate Limiting & Application-specific UDP Packet
+	+ACK Scanning:
+		-[Target] Existence of Firewall or its rulesets,like the port is filtered or unfiltered.
+	+Window Scanning: Outdated
+	+FIN Scanning: TCP Flag [Control Bit] FIN:Last packet from sender
+		-[Target] Port closed/Firewall: [Hacker] sends FIN packet and [Target] responds with RST packet
+		-[Target] Port open/Firewall: [Hacker] sends FIN packet and [Target] bypasses the Firewall. 
+	+X-max Scanning: (Similar to FIN Scanning) but with FIN /PSH/URG flags
+	+NULL Scanning:  (Similar to FIN Scanning) but no TCP flags set
+	+Protocol Scanning: Determine what IP protocols (TCP/UDP) are enabled:
+	+ICMP Scanning: Determine if [Target] responds to ICMP requests
+			
+
+Attack:
+	+Target ports mostly associated with vulnerable services (1433 TCP MSSQL)
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+1.Portsweep: To scan multiple hosts for a specific listening port used to search a specific service.
+2.Unix domain service does not use [@IP][Port] instead of IPC (Inter-Process Comm.)
+3.TCP/IP 65536 ports
+4.TCP Connection Establishment [3-step handshakes] 
+	+Firstly the sever must complete a passive open [Open/bind/listen a port]
+	+Secondly the client must initiate an active open 	 
+		-SYN: [client] sends SYN (SEQUENCE NUMBER:A) to [server]
+		-SYN-ACK: [server] sends SYN-ACK (ACKNOWLEDGE NUMBER:A+1 & SEQUENCE NUMBER:B) to [client]
+		-ACK: [client] sends ACK (SEQUENCE NUMBER:A+1 & ACKNOWLEDGE NUMBER:B+1)
+5.TCP Connection Termination [4-step handshakes]
+	+[Initiator] sends FIN and [Receiver] responds with ACK - FIN (TCP Tear-down a pair of ACK & FIN)
+	+[Initiator] sends the final ACK and waits for a timeout.
+	+Connection Aborting RST or DATA LOSS RST
+6.ICMP:  
+	+Diagnostic protocol in Network Layer,used by diagnostic tools (ping&traceroute).
+	+Structure: Header [8.type.code] & Data
+	+Packet: IPv4*ICMP. IPv4 Protocol Flag determines the ICMP.
+	+ICMP Tunnels: Echo Request[8] & Echo Reply[0] tunneling complete TCP traffic 
+		-Bypass Firewall
+		-Encrypt data
+		-[Defense] Block ICMP traffic
+		-[Defense] Fix the size of ICMP traffic
+		-[Defense] IEEE 802.1x Authentification
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,100 @@
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+	IDS Attack (Intrusion Detection System)
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++[Objective]: Monitor a network/system from malicious activities /policy violations.
+	-[Admin] malicious activities/policy violations reported to an Administrator
+	-[SIEM] malicious activities/policy violations collected centrally to Security Information and Event Management which
+		+distinguishes malicious activities from falsh alarms by Alarm Filtering Technique.
+
+	--------------------------------------------------------------	
+	|Malicious Activities ---> IDS ---> [Admin]
+	|      			   |
+	|			   -------> SIEM
+	--------------------------------------------------------------	
+
++IDS Defense:
+	-[Signature-based][Known attacks] Detect specific patterns
+		+Byte Sequences by Malware
+
+	-[Anomaly-based][Unknown attacks] Machine learning 
+		+Create a model of trustworthy activity and compare new behavior with this model(Feature Selection Algorithm).
+		+[Time Consuming] Degrade the performance of IDS.
+
++IPS Defense:
+	-[Signature-based][Known attacks] specific patterns
+	-[Anomaly-based]  [Unknown attacks] Maching learning &Model
+	-[Protocal-based] [Unknown attacks] Maching learning &Model
+		+Create a model of trustworthy protocol and compare incoming protocol with this model
+		+[Time Consuming] Degrade the performance of IPS
+
++Attacks:
+	+[Fragmentation]: Send fragmented packets from [hacker] specific patterns/signatures;
+	+[Avoiding Defaults]: Avoid default configurations for detecting malicious activities;
+	+[Coordinated,Low-bandwidth]: [1...n] hackers to attack [1...n] ports/[1...n]hosts from (N/HIDS) correlating packets [1...n]
+	+[Patten Change] 
+		+[IMAP] Internet Message Access Protocol: vulnerable to a buffer overflow
+	+[IP Address Spoofing]
+	+{Proxy Spoofing]
+	+[Noise] Limite N/HIDS performance
+		+Corrupt DNS Data
+		+Software bugs generate bad packets
+		+Local packets
+
+	+[So-Far-Below-Numbers-Of-False-Alarms] N/HIDS ignores real attacks.
+	+[Long-time] attacking vulnerabilities signature-based IDS.
+	+[Penetration inside] Gain access to LAN in order to malpractice because of weakness of identification and authentification
+		mecanisme.
+	+[Encryption Packet] Like Trojans.
+	+[TCP/IP Stack]
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++[NIDS] Network-based Intrusion Detection System
+	+On-line NIDS: Analysis with traffic in real time
+	+Off-line NIDS: Analysis with stored data
+
++[HIDS] Host-based Intrusion Detection System
+	-Compare the before-after snapshots of system files. If modified --> Report
+
++[IPS] IDS with Response Capabilities
+	+Stop/Block attacks
+	+Change the environment: reconfigure firewall
+	+Modify the attacking content
+	+Defragment packets
+	+Clean up flags [Transport/Network Layer]
++[NIPS]: Network-based Intrusion Prevention System
++[HIPS]: Host-based Intrusion Prevention System
++[WIPS]: Wireless-based Intrusion Prevention System
++[PIPS]: Protocol-based Intrusion Prevention System, HTTP/HTTPS on web-server
+
++[NBA]:  Network Behavior Analysis
++[Firewall]: Block intrusions & No signal
++[IPS]:	     Application Layer Firewall
++[IDS]:	     Accept Intrusion & With Signal
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

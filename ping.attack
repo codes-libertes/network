@@ -1,0 +1,68 @@
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+	PING Attack
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++Ping of Death
+	-Overflow memeory buffer by sending [Maximum IPv4 Fragmentation] 65548 bytes + [Maximum IPv4 Header IHL] 60 bytes
+	 containing different protocols (TCP & UDP & ICMP)
+	-[Target]Crash the system 
+	-[Target]Inject malicious codes 
+
+ Defense:
+	-Firewall could check Fragment Offset to drop invalid fragments
+	-RAM large enough to assemble all fragments
+
++Ping Flood: DOS attack
+	-[Hacker] sends ICMP Echo Requests as fast as possible to overwhelm [Target] without waiting for ECHO Reply
+	-[Hacker] consuming both outcoming bandwidth as well as incoming bandwidth on slower CPU 
+
++Twinge Flood: DOS attack
+	-[Hacker] sends spoofed(false @IP @MAC,etc) ICMP Echo Requests to cripple [Target]
+	-Defense: Router & Firewall blocks ICMP [Ping] traffic
+	-Defense: Router & Firewall fixes the size of ICMP [Ping] traffic
+  
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+1.[Network Layer]Limitation of IPv4 packet including IP Header 2^16-1 = 65535 Bytes; It's determined by IPv4 Header Flag[Total Length]
+2.[Data Link Layer] limits the maximum frame size splited into IP Fragments by MTU [Maximum Transmission Unit][lo 65536 Bytes;
+   ethernet 1500 Bytes] 
+3.[Network Layer][IPv4 Header] Flag IHL[Internet Header Length] determines the size of IPv4 Header 20 bytes[5*32] < x < 60 bytes[15*32]
+4.[Network Layer][Ipv4 Header] Flag Fragment Offset determines the size of IPv4 Fragmentation 0 < X < 65528 bytes[(2^13-1)*8];
+			       if 20 bytes[Minimum IPv4 Header] + 65528 Bytes[Maximum IPv4 Fragmentation] = 65548 bytes,
+				> 65535 Bytes [Maximum IPv4 Packet]
+5.[Traceroute][Network Layer][IPv4 Header][ICMP]
+  +IPv4 Header Flag TTL (time to live) has two significations: 
+	-Time by seconds. If it's expired, ICMP Time Exceeded[11] will be sent back;
+	-Hop count. The router decrements the TTL by one/router until 0 and then ICMP Time Exceeded[11] will be sent back;  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

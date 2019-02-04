@@ -1,0 +1,89 @@
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+	DNS Spoofing
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++Principle: [Hacker] manipulates DNS Resolver's Cache [Gateway]and divert [target] all traffic to [Hacker]
+
+
++[Defense]: [Target] never caches Resource Record and Forwards to Org. name Server
++[Defense]: [Target] DNSSEC/HTTPS/TLS/IPSec: Domain Name System Security Extensions
+			-->Support Cryptographie(Public/private keys && Signature)
++[Defense]: [Target] DNSCurve/HTTPS/TLS/IPSec
++[Defense]: [Target] TSIG/HTTPS/TLS/IPSec
++[Defense]: [Target] [TOR(Proxy) + VPN]: hide @IP and reroute and anonymize DNS Query;
++[Defense]: [Target] [DNS Resolver/DNS Server] Logging + Private Rules  
+
++[TEST]: [DIG + WIRESHARK + WHOIS + NSCD]
+	
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+1.DNS: [Domain Name System] Translate human-friedly computer hostnames (domain names) into @IP in [Name Server: Resource Record]
+	-->[Address Resolution Mecanisme]: Root Name Server -> Org. Name Server -> Recursively ...-> Final Name Server 
+	-->[DNS Resolver]: [Gateway/DNS Client] side initiates/sequences Query [3 methods:Recursive/Non-recursive/iterative] 
+			to [DNS Server] Org. Name Server
+	-->[Structure] Query & Reply [UDP:53]/[EDNS]/[TCP:53]
+		-[Header: 12 bytes]Identification | Flags | Nbr of Questions | Nbr of Answers | Nbr of authority RRs | Nbr of additional RRs
+		-[Data]		   Question Sections
+		-[Data]		   Answer Sections
+		-[Data]		   Authority RRs Sections
+		-[Data]		   Additional Info Sections
+	-->[Application Record Caching]
+		-chrome://net-internals/#dns
+		-fireforx: about:config
+	-->[DNS Reverse Query Lookup]
+		-@IP Yes; Hostname No. 
+		-@IP.in-addr.arpa
+	
+2.URL: Uniform Resource Locator	
+
+3.DNSmasq: DNS Name Server Software
+	-->[Objective]Provide DNS/DHCP/TFTP services to a small-scale network.
+	-->[Operation][Hacker] sends DNS Query to [Target][Cache:Resource Record];
+	-->[Operation][Target] accepts/answers/forwards to WAN with recursive [Cache:Resource Record];
+
+4.NSCD: Name server caching daemon
+	-->sudo netstat -anp | grep nscd
+	-->sudo nscd -g
+	-->/var/cache/nscd
+	-->strings /var/cache/nscd/*
+
+5.Domains: .NET .COM .ORG
+
+6.NAT:[Network Address Translation]
+	--> Remap @IP TO @IP by modifying IP Headers across a traffic routing device.
+
+7.PAT:[Port Address Translation]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

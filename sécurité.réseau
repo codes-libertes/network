@@ -1,0 +1,53 @@
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+                           Sécurité Réseau
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	Attaque 							Défense
+ +Idle Scan(Protocol)			       -||-		      	+Port Scanner(TCP)
+ +Port Scan(Protocol)						      	+Service Scanner	
+ +Wiretap  (Protocol)						      	+Cryptographie
+ +ARP Spoofing(Protocol)					      	
+ +DNS spoofing(Protocol)						+DNSSEC
+ +Smurf attack(Protocol)						+Smurf Amplifier
+ +Denial-of-service Attack						+
+ +Vlan Hopping(Hardware) 
+ +Cyberattack								+UBA
+									+SIEM
+ +Ping Flood(protocol)
+ +DHCP Snooping(protocol)
+
+
+
+
+
+------------------------------------------------------------------------------------------------------
+Sécurité information
+
+ +Traffic analysis			-||-			      	+Cryptographie
+ +Eavesdropping								+Cryptographie
+ +Man In The Middle						     	+TLS  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

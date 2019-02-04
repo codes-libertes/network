@@ -1,0 +1,34 @@
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+	SIEM * Security Information and Event Management	
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++[Objectif]: real-time analysis of security information and Events 
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+1.Applications:
+        -[SolorWinds] [Log & Event Manager]
+        -[RSA] [NetWitness Suite]
+        -[IBM] [Security QRadar]
+        -[TrustWave] [SIEM Entreprise & Log Management Entreprise]
+        -[McAfee][ESM Entreprise Security Management]
+        -[Micro Focus] [Sentinel Entreprise]
+        -[Micro Focus] [ArcSight]
+        -[Alien Vault] [USM Unified Security Management]
+        -[LogRhythm] [SIEM]
+        -[Splunk] [ES Entreprise Security]
+
+
+
+
+
+
+
+
+
+
+
+
+

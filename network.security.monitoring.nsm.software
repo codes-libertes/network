@@ -1,0 +1,73 @@
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+	NSM (Network Security Monitoring) Software
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
++Defense:
+	-[Fingerprint] Limit the type and amount of traffic
+		+[ICMP Reply Echo] Block timestamps and @IP masks
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ELK Stack: Elasticsearch, Logstash and Kibana
+	-[Purpose] Analyse Suricata logs (JSON Format)
+	-[Elasticsearch] Searching Engine based on Lucene library
+	-[Kibana] Data Visualation plugin for Elasticsearch
+
++Snorby: Front-end application for other applications which logs events (unified-to-binary format)
+	-Ruby on Rails (Web Application Framework)
+	-IDS Alerts & Logs	
+
++Sguil: Collection of free softwares NSM
+	-[TCPDUMP]
+	-[WIRESHARK] Packet Analyzer Protocol-based
+		+QT Interface
+		+PCAP to capture packets 
+		+Similar to TCPDUM(No graphical front-end) and add Sorting/Filtering options
+		+[Promiscuous Mode] All traffic visible		
+	-[p0f] Passive TCP/IP Fingerprinting tool (67-Bit Signature by TCP/IP Protocol Flags IPv4-TTL& TCP-Window Size)
+		+Identify OS of [Target]
+		+Identify Firewall presence of [Target]
+	-[TCPFLOW] Extract ASCII Dump of TCPDUMP
+	-[SANCP] Security Analyst Network Connection Profiler
+		+Collect statistic informations from Traffic
+	-[Barnyard] Decode IDS Alerts and Send them to Sguil
+	-[Snort] 2.x IDS Logs & Alerts
+	-[Suricata] 4.x IDS logs & Alerts 
+	-[MySQL]
+
++Prelude IDS:
+
++Base: Searching Engine
+
++Conky: System Monitoring software
+
++PFSense: Packet-filtering 
+	-Firewall/Router software based on Web Interface
+
++TCPTRACE: Tool for analysing TCPDUMP Logs
+
++NMap: Active TCP/IP Fingerprinting tool
+
++Ettercap: Active TCP/IP Fingerprinting tool
+
++DSniff:Password sniffing and network traffic protocol-based analysing tool
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

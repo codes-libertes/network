@@ -1,0 +1,80 @@
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+	Firewall Attack
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++[Attack]: Ports
+	
+
++[Defense]:Ports
+	-[]
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++[Purpose]: Predetermined-security-rules-based network security system which monitors and controls incoming/outgoing
+	    network traffic.
+
++[Type][Location]:
+	-Network-based Firewall:
+	-Host-based Firewall:
+
++[statefull & stateless]:
+	-[Stateful]:
+		+Aware of traffic patterns and data flows
+			-what stage of TCP connection (Open, Open sent, synchronized, synchronization ack, established)
+			-If MTU has changed
+			-If packets have fragmented
+		+BDD
+		+Implement IP security functions such as tunnels and encryptions
+
+	-[Stateless]:
+		+Filtering packets based @IP_SRC @IP_DST PORT_SRC PORT_DST or others static values
+		+Not aware of traffic patterns or data flows
+		+Use simple rule-sets
+		+No BDD
+
+
++[Type][OSI]:
+	-[Network Layer Firewall]: Based on Network Protocols [Stateful & Stateless]
+		+[gufw]:      user-space-based firewall
+			-[ufw] graphical interface
+			-[ufw] uncomplicated firewall
+
+		+[ufw]:       user-space-based firewall (standard firewall for Ubuntu)
+			-[Downlink] Front-end iptables
+			-[Downlink] hand off network traffic to --> [IPTables]-->[Netfilter]
+
+		+[iptables]:  user-space-based firewall (standard firewall for UNIX/LINUX)
+			-[Downlink] Hand off network traffic to [netfilter] with its rules
+			-[Database] database of firewall rules
+ 
+		+[netfilter]: kernel-space-based subsystem 
+
+	-[Application Layer Firewall] Based on Application Protocols 
+		+[Kaspersky]
+		+[McAfee]
+		+[Microsoft]
+		+[Norton]
+		+[Outpost]
+		+[Symantec]
+		+[Trend]
+		+[360]
+
++[NAT]: Network Address Translation
+
++[Proxy]: Proxy Server could play as Firewall(Filter/block....)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

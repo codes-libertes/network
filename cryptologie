@@ -1,0 +1,34 @@
+++++++++++++++++++++++++++++++++++++++++Information Sécurité++++++++++++++++++++++++++++++++++++
+                            
+       La cryptologie (une science de secret)
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+--Attaque: Cryptanalyse(déchiffrer l'information)
+	 --Attaque par mot probable	
+	 --Attaque par dictionnaire 	
+	 --Attaque par force brute	
+	 --Attaque par paradoxe des anniversaires	
+
+--Défense: Cryptographie(chiffrer  l'information)
+         --Système symétique à clef secrète
+		1.(Confidentialité)Chiffrer et déchiffrer l'information sur la meme clef
+		2.(Non-répudiation)L'échange des clés se base sur TLS/IPSec ou sont rendu publique sur un serveur local.
+		3.Les algorithmes: DES, 3DES, AES, RC4/5 
+         --Système asymétique à clef publique
+		1.(Confidentialité) Chiffrer(par la clé publique) et déchiffrer(par celle privée) l'information
+		2.(Non-répudiation) L'échange des clés se base sur TLS/IPSec ou sont rendu publique sur un serveur local.
+		3.(Authentification) La signature numérique est distinguée d'après le condenstat de l'information
+		4.Les algorithmes: RSA(chiffrement et signature), DSA(signature)
+	 --Fonction de hachage
+		1.(Confidentialité) Convertir un grand ensemble en un plus petit ensemble.
+		2.(Confidentialité) Impossible d'en déchiffrer à revenir à l'ensemble d'origine 
+		3.Les algorithmes: MD5,SHA-1,SHA-256
+
+Définitions:
+4 Facettes:
+    --Confidentialité:
+    --Authentification: Assurer l'auteur de l'information chiffrée
+    --Non-Répudiation:  Assurer la remise d'un contrat
+    --Intégrité:        Vérifier la non-manipulation sans-authorisation ou par erreur
+
+
