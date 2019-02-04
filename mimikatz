@@ -1,0 +1,6 @@
+1.Purpose:
+Application Security: Phishing tool which could extract plaintext passwords/hashes/PIN codes/Kerberos tickets from Memory.
+
+Sites:
+https://github.com/gentilkiwi/mimikatz
+http://blog.gentilkiwi.com/
