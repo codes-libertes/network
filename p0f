@@ -13,7 +13,7 @@ et compare les segments d'analyse avec une base de données (Prise d'empreintes 
 4. Détection de la distance d'une machine distante ainsi que depuis combien de temps la machine  est démarrée.
 
 [Pratiques]:
-1. Télécharger, décompenser et compiler la dernière version du sites http://lcamtuf.coredump.cx/p0f3/
+1. Télécharger, décompresser et compiler la dernière version du sites http://lcamtuf.coredump.cx/p0f3/
 #tar -xzvf p0f-3.09b.tgz
 #cd p0f-3.09b
 #./build.sh all
@@ -30,7 +30,7 @@ et compare les segments d'analyse avec une base de données (Prise d'empreintes 
 #sudo ./p0f -i eth0 -p
 
 2.4 Sauvegarder l'affichage dans un log
-#sudo ./p0f -i wlp3s0 -p -o ./p0f.log
+#sudo ./p0f -i eth0 -p -o ./p0f.log
 
 2.5 Lire cap
 #sudo ./p0f -r some_capture.cap
