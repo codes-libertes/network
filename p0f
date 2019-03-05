@@ -1,0 +1,39 @@
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+		p0f
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[Objectifs]:
+p0f, passive OS fingerprinting, permet de faire de la détection des OS de matière passive, par écoute du réseau,
+et compare les segments d'analyse avec une base de données (Prise d'empreintes OS).
+
+[Fonctions]:
+1. Détection des empreintes OS
+2. Détection de la présence d'un pare-feu et NAT
+3. Détection d'un load balancer (répartiteur de charge réseau)
+4. Détection de la distance d'une machine distante ainsi que depuis combien de temps la machine  est démarrée.
+
+[Pratiques]:
+1. Télécharger, décompenser et compiler la dernière version du sites http://lcamtuf.coredump.cx/p0f3/
+#tar -xzvf p0f-3.09b.tgz
+#cd p0f-3.09b
+#./build.sh all
+
+2. Executer certaines commandes:
+
+2.1  Help 
+#sudo ./p0f -h
+
+2.2 Afficher toutes les interfaces
+#sudo ./p0f -L
+
+2.3 Écouter de matière passive une interface
+#sudo ./p0f -i eth0 -p
+
+2.4 Sauvegarder l'affichage dans un log
+#sudo ./p0f -i wlp3s0 -p -o ./p0f.log
+
+2.5 Lire cap
+#sudo ./p0f -r some_capture.cap
+
+[Sites relatifs]:
+http://lcamtuf.coredump.cx/p0f3/
