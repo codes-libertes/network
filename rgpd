@@ -1,0 +1,43 @@
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+		RGPD (Règlement Général sur la protection des données)
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[Les enjeux]:
+	+RGPD signifie Règlement Général sur la protection des données;
+	+C'est un règlement européen défini le 27 avril 2016; mis en vigueur en 2018 par cnil;
+	+Il précise que la protection des données personnelles nécessite de prendre des mesures
+	 techniques et organisationnelles appropriées afin de garantir un niveau de sécurité adapté au risque;	
+	+Pour cela, de manière générale, il faut suivre des 4 étapes:
+		+Recenser les traitements,
+		+Apprécier les risques,
+		+Mettre en oeuvre et vérifier les mesures prévues,
+		+Faire réaliser des audits de sécurité périodiques.
+		
+[Les liens avec la cybersécurité]:
+
+[Les entreprises concernées]:
+	+Ce sont les entreprises chez elles des données sont stockées et DPO vérifie la mise en conformité RGPD.
+	 Sinon, il va contacter des cabinets tiers (SOCs externalisés) dans le domaine cybersécurité.
+
+
+[Missions]:
+	+?Encadrer la maintenance et la déstruction des données
+	+?Encadrer les développements informatiques
+	+?Authentifier les utilisateurs
+	+?Tracer les accès et gérer les incidents
+	+?Sécuriser les serveurs 
+	+?Protéger le réseau interne
+	+?Archiver, chiffrer de manière sécurisée
+	+?
+	+?
+	+?
+	+?
+	+?
+	+?
+	+?
+
+Terminologies:
+1. CNIL: Commission nationale informatique et libertés
+
+
