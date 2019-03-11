@@ -54,6 +54,10 @@ CVE: Common Vulnerabilities and Exposures
 	+ un dictionaire des informations publiques relatives aux vulnérabilités de sécurité.
 	+ maintenu par MITRE
 	
+CVSS:Common Vulnerability Scoring System
+	+Un système d'évaluation standardisé de la criticité des vulnérabilités selon les critères 
+	 objectifs et mesurables
+
 Payloads: 
 	+Singles	windows/shell_bind_tcp	<shell_bind_tcp>:single
 	+Stagers	windows/shell/bind_tcp	<bind_tcp>:stager
