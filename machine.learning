@@ -62,6 +62,10 @@
 	-Similarity and Metric Learning:
 	-Sparse Dictionary Learning:	
 
++[Infrastructures]:
+	-Scikit-learn
+	-Keras
+	-Tensorflow
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
