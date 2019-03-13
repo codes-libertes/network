@@ -27,7 +27,12 @@ Preferences->General->Network Settings->Connection Settings->
 2.2 Télécharger, installer CA Certificate <cacert.der> de https://burp <CA Certificate>
 Preferences->Privacy&Security->Certificates->View Certificates->Authorities->Import
 
-3. Configurer BurpSuite
+3. Configurer chrome
+#sudo vim /usr/share/applications/google-chrome.desktop
+
+--Exec=/usr/bin/google-chrome-stable %U --proxy-server="127.0.0.1:8080"
+
+4. Configurer BurpSuite
 --app.desktop->next->Start Burp->Proxy->intercept->intercept is on
 
 
