@@ -33,8 +33,15 @@ Preferences->Privacy&Security->Certificates->View Certificates->Authorities->Imp
 --Exec=/usr/bin/google-chrome-stable %U --proxy-server="127.0.0.1:8080"
 
 4. Configurer BurpSuite
+
 --app.desktop->next->Start Burp->Proxy->intercept->intercept is on
 
+5. Brute force 
+
+-->Proxy->intercept->Raw->Send to Intruder
+-->Intruder->Positions->Clear->Add->Attack Type "Cluster bomb"
+-->Intruder->Payloads->Payload Sets->Payload set "1" ->Payload Options -> load "usernames.txt"
+-->Intruder->Payloads->Payload Sets->Payload set "2" ->Payload Options -> load "passwords.txt"
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 [Sites]:
