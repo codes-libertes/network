@@ -1,0 +1,62 @@
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+	Burp Suite
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[Usage]:
+
+1. Télécharger, installer BurpSuite
+#chmod 777 burpsuite_community_linux_v1_7_36.sh
+#./burpsuite_community_linux_v1_7_36.sh
+#mv BurpSuiteCommunity/*.desktop BurpSuiteCommunity/app.desktop
+#cd BurpSuiteCommunity
+#nautilus .
+
+2. Configurer Firefox
+2.1 Configurer le proxy 
+Preferences->General->Network Settings->Connection Settings->
+								"Manual proxy configuration" 
+								"127.0.0.1"
+								"8080"
+								"Use this proxy server for all protocols"
+								"No proxy for" "vide"
+							     ->OK
+2.2 Télécharger, installer CA Certificate <cacert.der> de https://burp <CA Certificate>
+Preferences->Privacy&Security->Certificates->View Certificates->Authorities->Import
+
+3. Configurer BurpSuite
+--app.desktop->next->Start Burp->Proxy->intercept->intercept is on
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[Sites]:
+https://portswigger.net/burp/communitydownload
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
