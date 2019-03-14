@@ -43,6 +43,10 @@ Preferences->Privacy&Security->Certificates->View Certificates->Authorities->Imp
 -->Intruder->Payloads->Payload Sets->Payload set "1" ->Payload Options -> load "usernames.txt"
 -->Intruder->Payloads->Payload Sets->Payload set "2" ->Payload Options -> load "passwords.txt"
 
+6. SQL Injection
+
+-->Alerts
+
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 [Sites]:
 https://portswigger.net/burp/communitydownload
