@@ -1,0 +1,87 @@
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+	FTP
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[Théorie]:
+  FTP Bounce Attack:
+	+[Principe]: 
+	 
+	  	-Use PORT command to request Access to ports indirectly through the machine of 
+		 victime.
+
+	+[Defence]: 
+		-Refuse the PORT command
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[Pratique]:Nmap
+
+https://svn.nmap.org/nmap/scripts/ftp-anon.nse
+https://svn.nmap.org/nmap/scripts/ftp-brute.nse
+https://svn.nmap.org/nmap/scripts/ftp-bounce.nse
+
+1.FTP server allows anonymous logins
+nmap -sV --script ftp-anon -p 21 @IP
+
+2.Performs brute force password auditing against FTP servers.
+nmap -sV --script ftp-brute -p 21 @IP
+
+3.Checks to see if an FTP server allows port scanning using the FTP bounce method
+nmap -sV --script ftp-bounce -p 21 188.165.243.51
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[Pratique]:msf
+
+1. FTP Version Scanner
+msf5 > use auxiliary/scanner/ftp/ftp_version
+msf5 auxiliary(scanner/ftp/ftp_version) > ping -c 1 <target>
+msf5 auxiliary(scanner/ftp/ftp_version) > set RHOSTS @IP
+msf5 auxiliary(scanner/ftp/ftp_version) > use
+
+
+2. Anonymous FTP Access Detection
+
+msf5 > use auxiliary/scanner/ftp/anonymous
+msf5 auxiliary(scanner/ftp/anonymous) > set RHOSTS @IP
+msf5 auxiliary(scanner/ftp/anonymous) > run
+
+3. FTP Authentication Scanner
+msf5 > use auxiliary/scanner/ftp/ftp_login
+msf5 auxiliary(scanner/ftp/ftp_login) > set RHOSTS @IP
+msf5 auxiliary(scanner/ftp/ftp_login) > set VERBOSE true
+msf5 auxiliary(scanner/ftp/ftp_login) > set USER_FILE <FILE>
+msf5 auxiliary(scanner/ftp/ftp_login) > set PASS_FILE <FILE>
+msf5 auxiliary(scanner/ftp/ftp_login) > run
+
+4. FTP Bounce Port Scanner
+msf5 > use auxiliary/scanner/portscan/ftpbounce
+msf5 auxiliary(scanner/portscan/ftpbounce) > set BOUNCEHOST @IP
+msf5 auxiliary(scanner/portscan/ftpbounce) > run
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
