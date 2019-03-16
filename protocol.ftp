@@ -30,7 +30,7 @@ nmap -sV --script ftp-anon -p 21 @IP
 nmap -sV --script ftp-brute -p 21 @IP
 
 3.Checks to see if an FTP server allows port scanning using the FTP bounce method
-nmap -sV --script ftp-bounce -p 21 188.165.243.51
+nmap -sV --script ftp-bounce -p 21 @IP
 
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
