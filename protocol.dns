@@ -1,0 +1,87 @@
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+	DNS
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[Pratique]: nmap
+
+1.Attempts to discover hosts' services using the DNS Service Discovery protocol.
+nmap --script=broadcast-dns-service-discovery
+
+2.Checks target IP addresses against multiple DNS anti-spam and open proxy blacklists and returns a list of services for which an IP has been flagged
+nmap -sn @IP --script dns-blacklist
+
+3.Attempts to enumerate DNS hostnames by brute force guessing of common subdomains.
+nmap --script dns-brute www.? -sn -n -Pn
+
+4.Perform DNS cache snooping against a DNS server.
+sudo nmap -sU -p 53 --script dns-cache-snoop.nse @IP
+
+5.Checks DNS zone configuration against best practices, including RFC 1912
+nmap -sn -Pn www.xxx.com --script dns-check-zone --script-args='dns-check-zone.domain=xxx.com'
+
+6.Retrieves information from a DNS nameserver by requesting its nameserver ID (nsid) and asking for its id.server and version.bind values.
+sudo nmap -sSU -p 53 --script dns-nsid @IP
+
+7.Checks if a DNS server allows queries for third-party names
+sudo nmap -sU -p 53 --script=dns-recursion @IP
+
+8.Attempts to discover target hosts’ services using the DNS Service Discovery protocol.
+nmap --script=dns-service-discovery @IP
+nmap --script=dns-service-discovery www.xxx.com
+nmap --script=dns-service-discovery -p ? @IP
+
+9.Enumerates various common service (SRV) records for a given domain name
+nmap --script=dns-srv-enum.nse @IP
+
+10.Requests a zone transfer (AXFR) from a DNS server.
+nmap --script dns-zone-transfer --script-args dns-zone-transfer.domain=zonetransfer.me www.xx.com
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[Pratique]: msf
+
+1.Multi Gather DNS Forward Lookup Bruteforce
+msf5 > use post/multi/gather/dns_bruteforce
+
+2.Multi Gather DNS Reverse Lookup Scan
+msf5 > use post/multi/gather/dns_reverse_lookup
+
+3.DNS Record Scanner and Enumerator
+msf5 > use auxiliary/gather/enum_dns
+msf5 auxiliary(gather/enum_dns) > set DOMAIN <www.?>
+msf5 auxiliary(gather/enum_dns) > run
+
+4.DNS Amplification Scanner
+msf5 > use auxiliary/scanner/dns/dns_amp
+
+msf5 auxiliary(scanner/dns/dns_amp) > exploit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
