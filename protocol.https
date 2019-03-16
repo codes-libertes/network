@@ -1,0 +1,67 @@
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+	HTTPS
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[Pratique]:nmap
+
+1.Retrieves a server’s SSL certificate
+nmap -sV -sC -p 443 @IP -n -vv
+
+2.Weak ephemeral Diffie-Hellman parameter detection for SSL/TLS services
+nmap --script=ssl-dh-params -p 443 @IP -n
+
+3.Determines whether the server supports obsolete and less secure SSLv2, and discovers which ciphers it supports.
+nmap -p 443 --script sslv2 @IP -n
+
+4.Detects whether a server is vulnerable to the SSL/TLS “CCS Injection” vulnerability
+nmap -p 443 --script ssl-ccs-injection @IP
+
+5.Retrieves a target host’s time and date from its TLS ServerHello response.
+nmap -p 443 --script ssl-date @IP -n
+
+6.Script repeatedly initiates SSLv3/TLS connections, each time trying a new cipher or compressor while recording whether a host accepts or rejects it. 
+nmap -p 443 --script ssl-enum-ciphers @IP -n
+
+6.Detects whether a server is vulnerable to the OpenSSL Heartbleed bug
+nmap -p 443 --script ssl-heartbleed @IP -n
+
+7.Checks whether SSLv3 CBC ciphers are allowed (POODLE).
+nmap -p 443 --script ssl-poodle @IP -n
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[Pratique]:msf
+
+1.HTTP SSL Certificate Information
+msf5 > use auxiliary/scanner/http/ssl
+
+2.HTTP SSL/TLS Version Detection (POODLE scanner)
+msf5 > use auxiliary/scanner/http/ssl_version
+
+3.OpenSSL Server-Side ChangeCipherSpec Injection Scanner
+msf5 > use auxiliary/scanner/ssl/openssl_ccs
+
+4.OpenSSL Heartbeat (Heartbleed) Information Leak
+msf5 > use auxiliary/scanner/ssl/openssl_heartbleed
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
