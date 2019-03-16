@@ -1,0 +1,49 @@
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+	SMTP	
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[Pratique]:nmap
+
+1.Attempts to relay mail by issuing a predefined combination of SMTP commands
+nmap --script=smtp-open-relay -p 25 www.xx.com
+
+2.Attempts to enumerate the users on a SMTP server by issuing the VRFY, EXPN or RCPT TO commands.
+nmap --script=smtp-enum-users -p 25 www.xx.com
+
+3.Attempts to use EHLO and HELP to gather the Extended commands supported by an SMTP server
+nmap --script=smtp-commands -p 25 www.xx.com
+
+4.Performs brute force password auditing against SMTP servers using either LOGIN, PLAIN, CRAM-MD5, DIGEST-MD5 or NTLM authentication.
+nmap --script=smtp-brute -p 25 www.xx.com
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[Pratique]:msf
+
+1.SMTP Banner Grabber
+msf5 > use auxiliary/scanner/smtp/smtp_version
+
+2.SMTP Open Relay Detection
+msf5 > use auxiliary/scanner/smtp/smtp_relay
+
+3.SMTP User Enumeration Utility
+msf5 > use auxiliary/scanner/smtp/smtp_enum
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
