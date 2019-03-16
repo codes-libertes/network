@@ -9,7 +9,7 @@
 nmap --script ssh2-enum-algos -p 22 -n @IP
 
 2.Shows SSH hostkeys
-nmap --script ssh-hostkey -p 22 -n 188.165.243.51 --script-args ssh_hostkey=full
+nmap --script ssh-hostkey -p 22 -n @IP --script-args ssh_hostkey=full
 
 3. Checks if an SSH server supports the obsolete and less secure SSH Protocol Version 1
 nmap --script sshv1 -p 22 -n @IP
