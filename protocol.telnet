@@ -1,0 +1,45 @@
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+	TELNET
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[Pratique]:nmap
+
+1. Performs brute-force password auditing against telnet servers.
+nmap -p 23 --script telnet-brute --script-args userdb=myusers.lst,passdb=mypwds.lst,telnet-brute.timeout=8s @IP
+
+2.Determines whether the encryption option is supported on a remote telnet server.
+nmap -p 23 @IP --script telnet-encryption
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[Pratique]:msf
+
+1.Telnet Service Banner Detection
+msf5 > use auxiliary/scanner/telnet/telnet_version
+
+2.Telnet Login Check Scanner
+msf5 > use auxiliary/scanner/telnet/telnet_login
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
