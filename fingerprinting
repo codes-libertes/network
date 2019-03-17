@@ -1,0 +1,69 @@
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++=
+
+	FINGERPRINTING
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++=
+[PASSIVE]:
+
+1.WHOIS
+	+1.1 CLI
+		whois -H xx.com
+		whois xx.com
+		whois -H @IP
+		whois -h whois.cymru.com "-v @IP"
+	+2.1 Website
+		http://whois.domaintools.com
+		https://www.he.net
+
+2.RECON-NG
+"https://bitbucket.org/LaNMaSteR53/recon-ng/wiki/Usage%20Guide"
+git clone https://LaNMaSteR53@bitbucket.org/LaNMaSteR53/recon-ng.git
+cd recon-ng/
+pip install -r REQUIREMENTS
+./recon-ng
+[recon-ng][default] > use recon/domains-hosts/bing_domain_web
+[recon-ng][default] > use recon/domains-hosts/google_site_web
+[recon-ng][default] > use recon/domains-hosts/brute_hosts
+[recon-ng][default] > use recon/hosts-hosts/resolve
+[recon-ng][default] > use reporting/csv
+[recon-ng][default][google_site_web] > back
+[recon-ng][default][bing_domain_web] > show options
+[recon-ng][default][brute_hosts] > run
+
+3.THEHARVESTER
+git clone git://git.kali.org/packages/theharvester.git
+cd theharvester
+python theHarvester.py -d xx.com -l 500 -b all
+python theHarvester.py -d xx.com -l 500 -b all -c
+
+4. HACKERTARGET
+curl -s http://api.hackertarget.com/hostsearch/?q=xx.com
+curl -s http://api.hackertarget.com/dnslookup/?q=xx.com
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++=
+[ACTIVE]:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
