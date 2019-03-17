@@ -6,13 +6,14 @@
 [PASSIVE]:
 
 1.WHOIS
-	+1.1 CLI
++1.1 CLI
 		whois -H xx.com
 		whois xx.com
 		whois -H @IP
 		whois -h whois.cymru.com "-v @IP"
-	+2.1 Website
++2.1 Website
 		http://whois.domaintools.com
+		http://reverseip.domaintools.com
 		https://www.he.net
 
 2.RECON-NG
@@ -40,30 +41,57 @@ python theHarvester.py -d xx.com -l 500 -b all -c
 curl -s http://api.hackertarget.com/hostsearch/?q=xx.com
 curl -s http://api.hackertarget.com/dnslookup/?q=xx.com
 
+5.GOOGLE DORKS
+
+6. SHODAN
+https://www.shodan.io
+
+7.CENSYS
+https://censys.io
+
+8.IPADDRESS
+http://serversniff.net.ipaddress.com
+
+9. ROBTEX
+https://www.robtex.com
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++=
 [ACTIVE]:
 
+1. HOST
+host xx.com
+host -t ns xx.com
+host -t a xx.com
+host -t aaaa xx.com
+host -t mx xx.com
+host -t soa xx.com
+host @IP
 
+2.NSLOOKUP
+nslookup
+> set type=ns
+> set type=mx
+> xx.com
+> exit
 
+3.DNS Zone Transfer
+host -t ns xx.com
+host -l xx.com yy.com
+dig axfr xx.com yy.com
+dnsrecon -d xx.com -t axfr
+dnsenum xx.com
+dig -t any xx.com
 
+4. NMAP
 
+4.1 Ping Gateway IP Addresses
+nmap -sn -v -PE 192.168.*.1
 
+4.2 Reverse DNS Lookup
+nmap -sL 192.168.1.0/24
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+4.3 Identifying Alive IP Addresses
+nmap -sn -n 192.168.1.0/24
+nmap -sn -PE 192.168.1.0/24
+sudo nmap -sn -n -PE 192.168.1.0/24 --reason --disable-arp-ping
 
 
