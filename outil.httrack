@@ -4,6 +4,8 @@ HTTRACK
 [Objectives]:
   +Web crawler
   +Offline browser
+  +Download docs
+  +Phish user credentials by programming HTTP POST
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 [Pratiques]:
 
