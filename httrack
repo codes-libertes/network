@@ -1,0 +1,24 @@
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+HTTRACK
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[Objectives]:
+  +Web crawler
+  +Offline browser
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[Pratiques]:
+
+1. Télécharger le website
+
+#httrack
+Enter project name :httrack
+Base path (return=/root/websites/) :/root/httrack
+Enter URLs (separated by commas or blank spaces) :xxx.com 
+: 2
+Proxy (return=none) :
+Wildcards (return=none) :*
+Additional options (return=none) :
+Ready to launch the mirror? (Y/n) :y
+
+2. Navigater sur localhost:8000
+#python -m SimpleHttpServer
+http://localhost:8000
