@@ -1,5 +1,5 @@
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-HTTRACK
+      HTTRACK
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 [Objectives]:
   +Web crawler
@@ -11,7 +11,7 @@ HTTRACK
 
 1. Télécharger le website
 
-#httrack
+#httrack <xx.com>
 Enter project name :httrack
 Base path (return=/root/websites/) :/root/httrack
 Enter URLs (separated by commas or blank spaces) :xxx.com 
