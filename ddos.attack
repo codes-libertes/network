@@ -6,12 +6,20 @@
 
 +[Objectif]:[Hackers] seeks to make [targets] unavailable to users by disrupting services of [targets].
 	-Flooding superfluous requests to overload systems and prevent legitimate requests from being fulfilled
-
+	-Rendre indisponible un service.
+	-Empecher des utilisateurs légitimes d'utiliser un service.
 
 +[Attack]:
+	-TCP innodations,TOUS LES TCP CHAMPS
+	-UDP innodations
+	-Exploitations des failles et vulnérabilités d'une ciblé
+	-Défragmentation et ré-assemblage du paquets IP
+	-Smurfing attack
 
 +[Defense]:
 	-[Blackholing&Sinkholing]: all traffics to the attacked DNS/IP Address is sent to the blackhole(null interface&null-existent-server)
+	
+
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
