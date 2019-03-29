@@ -1,0 +1,54 @@
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+	SPLUNK
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Cet outil consiste à 3 parties:
+Back-end:  la daemon processus splunkd en C++
+
+	Il conclut 3 composants:
+	-splunk forwarder, pour forwarder les données
+		-Collecter les données de plusieurs sources
+		-Couper les données par 64KB block
+		-Ajouter la metadata key pour chaque block pour controller la phase indexer
+ 
+	-splunk indexation, pour parser et indexer les données et stocker (les données orignales et ficher de index) dans la disque
+		-parser: analyser, transformer les données pour extraire les informations relatives
+		-indexer: pour faciliter la phase de search
+
+	-splunk search head,pour chercher, analyser les données.
+
+Front-end: splunk web interface en Python et AJAX
+	-générer le reportage,
+	-alerter la personne chargée de SPLUNK
+	-visualiser les type d'évènement sur dashboard.
+
+CLI:
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+SPL:Search Processing Language
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
