@@ -27,6 +27,13 @@ Front-end: splunk web interface en Python et AJAX
 CLI:
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[Practice]:
+1.Three ways to push logs to Splunk 
+	- Splunk linux app
+	- Splunk universal forwarder
+	- syslog
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 SPL:Search Processing Language
 
 
