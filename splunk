@@ -28,11 +28,22 @@ CLI:
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 [Practice]:
-1.Three ways to push logs to Splunk 
-	- Splunk linux app
-	- Splunk universal forwarder
-	- syslog
-
+1.Splunk universal forwarder to push logs to Splunk 
+```
+dpkg -i splunkforwarder-7.2.5.1-962d9a8e1586-linux-2.6-amd64.deb
+cd /opt/splunkforwarder/
+./splunk start --accept-license
+./splunk add forward-server 192.168.1.xx:514
+./splunk add monitor /var/log/suricata/
+ ```
+ 
+ 2.Splunk linux app to push logs to Splunk 
+ 3.Syslog to push logs to Splunk 
+ ```
+ vim /etc/rsyslog.conf 
+ *.* @192.168.1.xx:514
+ systemctl start syslog.service
+ ```
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 SPL:Search Processing Language
 
