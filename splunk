@@ -37,8 +37,9 @@ cd /opt/splunkforwarder/
 ./splunk add monitor /var/log/suricata/
  ```
  
- 2.Splunk linux app to push logs to Splunk 
- 3.Syslog to push logs to Splunk 
+2.Splunk linux app to push logs to Splunk 
+
+3.Syslog to push logs to Splunk 
  ```
  vim /etc/rsyslog.conf 
  *.* @192.168.1.xx:514
