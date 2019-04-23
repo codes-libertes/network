@@ -16,7 +16,20 @@ msf5 > use auxiliary/scanner/mysql/mysql_hashdump
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 [practique]:mysql
-mysql -u root -p
+#vim /etc/mysql/mariadb.conf.d/50-server.cnf
+```
+bind-address		= 127.0.0.1
+bind-address		= 0.0.0.0
+```
+# netstat -anptu
+
+#mysql -u root -p
+```
+GRANT ALL ON mysql.* TO 'testroot'@'192.168.1.x' IDENTIFIED BY 'testpassword';
+exit;
+```
+
+#mysql -u testroot -p -h 192.168.1.y
 
 
 
