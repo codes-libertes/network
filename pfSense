@@ -1,0 +1,46 @@
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	
+	pfSense - Packet Filtering Sense
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[OBJECTIF]:
+	-Open Source Firewall Logiciel (stateful)
+	-Open Source Routing Logicile
+	-Open Source NAT Logicile
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[FONCTIONNALITÉS]:
+	-Pare-feu
+	-NAT
+	-Load Balancing
+	-VPN
+		+Il offre 4 options de connectivité VPN:IPsec, OpenVPN, PPTP et L2TP
+	-RRD
+	-DNS
+	-Captive Portal
+	-DHCP
+	-Gestion des plugins
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[TYPE]: FIREWALL BSD
+	-m0n0wall
+	-OPNsense
+	-phSense
+	-SmallWall
+[TYPE]: FIREWALL LINUX
+	-Netfilter(iptables)
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+
+
+
+
+
+
+
+
+
+
