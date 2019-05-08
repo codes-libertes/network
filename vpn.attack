@@ -1,0 +1,142 @@
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+	VPN - Virtual Private Network
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[Objectif]:
+	-Permet d'accéder à des ordi distants comme si l'on était connecté au réseau local.
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[Attack]:
+	-Matétiel VPN (Router & Switch):
+	-Logiciel VPN: 
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[Defense]:
+	-Matétiel VPN (Router & Switch):
+	-Logiciel VPN: 
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[Terminlogy]:
+L2TP: Layer 2 Tunneling Protocol
+OpenSSH: Logiciel d'accès distant permettant la création de tunnels sécurités
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+VPNs Commerciaux:
+NordVPN:
+SurfShark:
+ProtonVPN:
+PrivateVPN:
+HideMyAss:
+ExpressVPN:
+ZenMate:
+PureVPN:
+SaferVPN:
+VyprVPN:
+CyberGhost:
+BullGuard:
+Panda:
+HotspotShield:
+UltraVPN:
+IPVanish:
+StrongVPN:
+TunnelBear:
+Windscribe:
+PerfectPrivacy:
+MullVad:
+Trust.Zone:
+ibVPN:
+PrivateNetworkAccess:
+PIA:
+VPNSecureMe:
+BlackVPN:
+FatestVPN:
+TorGuard:
+IVPN:
+AVastSecureLine:
+AnonymousVPNorg:
+AirVPN:
+PersonalVPN:
+CeloVPN:
+GooseVPN:
+VPNArea:
+FrootVPN:
+AstrillVPN:
+SlickVPN:
+LiquidVPN:
+PrivateTunnel:
+Avira Phantom:
+BolehVPN:
+Buffered:
+SwitchVPN:
+SpyOFF:
+CactusVPN:
+OneVPN:
+VPNac:
+ZoogVPN:
+ProxPN:
+HideAllIP:
+BitDefender VPN:
+Browsec VPN:
+AVG VPN:
+TigerVPN:
+Encrypt ME:
+SurfEasy:
+Norton Wifi Privacy:
+AnonymizerVPN:
+Kaspersky VPN:
+F-Secure Freedome:
+VPN.ht:
+BTGuard VPN:
+AzireVPN:
+Speedify:
+Ra4w VPN:
+VPN Unlimited:
+AceVPN:
+HolaVPN:
+Betternet:
+HoxxVPN:
+Opera VPN:
+Touch VPN:
+Turbo VPN:
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+VPNs OpenSource:
+
+OpenVPN:
+OpenSwan:
+StongSwan:
+SoftEtherVPN:
+Hamachi:
+N2N:
+TheGreenBow VPN:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
