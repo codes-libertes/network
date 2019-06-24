@@ -1,6 +1,61 @@
-1.Purpose:
-Application Security: Phishing tool which could extract plaintext passwords/hashes/PIN codes/Kerberos tickets from Memory.
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Sites:
-https://github.com/gentilkiwi/mimikatz
-http://blog.gentilkiwi.com/
+	MIMIKATZ
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[Objectif]:
+	-Application Security: phishing tool which extracts plaintexts passwords, hash, PIN code and kerberos tickets from memory.
+	-Application Security: PTH ( pass-the-hash)
+	-Application Security: PTT ( pass-the-tickets)
+	-Application Security: GT (golden tickets)
+
+[Language]:
+	-C
+
+[OS]:
+	- WINDOWS NT
+	- WINDOWS XP
+	- WINDOWS VISTA
+	- WINDOWS 7
+	x WINDOWS 8
+	x WINDOWS 10
+
+[MODULE]:24
+	-STANDARD
+	-CRYPTO
+	-SEKURLSA
+	-KERBEROS
+	-PRIVILEGE
+	-PROCESS
+	-SERVICE
+	-LSADUMP
+	-TS
+	-EVENT
+	-MISC
+	-TOKEN
+	-VAULT
+	-MINESWEEPER
+	-NET
+	-DPAPI
+	-BUSYLIGHT
+	-SYSENV
+	-SID
+	-IIS
+	-RPC
+	-SR98
+	-RDM
+	-ACR
+
+[Pratiques]:
+
+mimikatz# 
+mimikatz# 123::
+
+
+mimikatz# privilege::debug
+mimikatz# sekurlsa::logonpasswords
+mimikatz# sekurlsa::tickets
+
+
+
+
