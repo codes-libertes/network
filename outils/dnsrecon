@@ -1,0 +1,37 @@
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++=
+
+	DNSRECON  - DNS ENUMERATION AND SCANNING TOOL
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++=
+[PRATIQUES]:
+1.DNSSEC
+# dnsrecon -d xx.com
+
+2.DNSKEYS
+# dnsrecon -d xx.com
+
+3.SRV RECORDS
+# dnsrecon -d xx.com
+
+4.BRUTE-FORCE HOSTNAMES
+# dnsrecon -d xx.com -D /usr/share/wordlists/dnsmap.txt -t std
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++=
+[OTHERS]:
+1.SUBDOMAINS
+https://findsubdomains.com
+
+2.DNSTABLES
+https://findsubdomains.com  
+
+3.HOSTNAMES
+www.immuniweb.com
+
+4.COMPLIANCES WITH PCI DSS,GDPR,NIST
+www.immuniweb.com
+
+: immuniweb.com for WEB SECURITY
+
+
+
